@@ -1,25 +1,15 @@
-//
-//  ViewController.swift
-//  Json
-//
-//  Created by Freddy on 31/12/00.
-//  Copyright © 2000 Freddy. All rights reserved.
-//
-
+import WebKit
 import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var wkWebView: WKWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        // let urlFreddy = URL(string:"https://www.google.com")
+        let urlFreddy = URL(string:"https://es.wikipedia.org/")
+        let peticion = URLRequest (url:urlFreddy!)
+        wkWebView.load(peticion)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
